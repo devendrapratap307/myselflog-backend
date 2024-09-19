@@ -17,7 +17,7 @@ import java.util.Date;
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt", "createdBy", "updatedBy"}, allowGetters = true)
 public class AuditBO {
 
-    @Column(nullable = false, updatable = false, name = "created_at")
+    @Column(name = "created_at", nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     private Date createdAt;
@@ -25,7 +25,7 @@ public class AuditBO {
     @Column(name = "created_by", updatable = false)
     private Long createdBy;
 
-    @Column(nullable = false, name = "updated_at")
+    @Column(name = "updated_at", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @UpdateTimestamp
     private Date updatedAt;
