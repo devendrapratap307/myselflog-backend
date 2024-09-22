@@ -48,6 +48,5 @@ public class JwtAuthenticationController {
         } catch (BadCredentialsException e) {
             throw new BadCredentialsException("Credentials Invalid !!");
         }
-
     }
 }
